@@ -19,6 +19,7 @@ public class SongEntity {
 
     private String songId;
 
+    @Column(columnDefinition = "TEXT")
     private String songDownloadLink;
 
     private String songImageUrl;

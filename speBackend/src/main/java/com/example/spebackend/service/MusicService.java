@@ -17,6 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -140,5 +141,9 @@ public class MusicService {
         KeywordEntity keyword = new KeywordEntity();
         keyword.setKeyword(songName);
         keyword.setSong(song1);
+    }
+
+    public List<SongEntity> getAllSongs() {
+        return songRepository.findAll();
     }
 }

@@ -25,6 +25,27 @@ public class MusicController {
         this.musicService = musicService;
     }
 
+    @GetMapping("/song/{id}")
+    public ResponseEntity<?> songSend(@PathVariable String id){
+        SongEntity song1 = musicService.searchSongId(id);
+        SongResponseDto dto = new SongResponseDto();
+        dto.setSongName(song1.getSongName());
+        dto.setSongImageUrl(song1.getSongImageUrl());
+        dto.setSongDownLoadUrl(song1.getSongDownloadLink());
+
+        // Read song file from the file system
+        byte[] songData;
+        try {
+            songData = Files.readAllBytes(new File(song1.getFilePath()).toPath());
+            dto.setSongData(Base64.getEncoder().encodeToString(songData));
+        } catch (IOException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error reading song file");
+        }
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(dto);
+    }
+
     @PostMapping ("/getSong")
     public ResponseEntity<?> sendSong(@RequestBody SearchSongRequest songRequest){
         SongResponseDto dto = new SongResponseDto();
