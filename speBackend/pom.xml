@@ -14,7 +14,7 @@
     <name>speBackend</name>
     <description>speBackend</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <repositories>
         <repository>
@@ -77,7 +77,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.11.6</version>
+                <configuration>
+                    <release>17</release>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
