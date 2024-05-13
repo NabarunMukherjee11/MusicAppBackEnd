@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: "https://github.com/NabarunMukherjee11/MusicAppBackEnd.git"
+            }
+        }
+        stage('Build Backend Project') {
+            steps {
+                sh 'cd speBackend && mvn clean package'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    docker.build('nabaruniiitb/musicappbackend')
+                }
+            }
+        }
+        stage('Push to Docker Hub') {
+            steps {
+                script {
+                    docker.withRegistry('', 'DockerHubCred') {
+                        docker.image('nabaruniiitb/musicappbackend').push('latest') 
+                    }
+                }
+            }
+        }
+    }
+}
