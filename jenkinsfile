@@ -12,7 +12,9 @@ pipeline {
         stage('Build Backend Project') {
             steps {
                 script{
-                    sh 'cd speBackend && mvn clean install'
+                    dir('speBackend') {
+                        sh 'mvn clean install'
+                    }
                 }
             }
         }
