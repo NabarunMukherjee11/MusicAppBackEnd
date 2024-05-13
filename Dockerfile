@@ -1,12 +1,9 @@
-FROM ubuntu:latest
-
-RUN apt-get update && \
-    apt-get install -y openjdk-17-jdk
-
-RUN mkdir /app
+FROM adoptopenjdk/openjdk17:alpine-jre
 
 WORKDIR /app
 
-COPY speBackend/target/speBackend-0.0.1-SNAPSHOT.jar .
+COPY speBackend/target/speBackend-0.0.1-SNAPSHOT.jar /app/speBackend.jar
 
-CMD ["java", "-jar", "speBackend-0.0.1-SNAPSHOT.jar"]
+EXPOSE 9292
+
+CMD ["java", "-jar", "speBackend.jar"]
