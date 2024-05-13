@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build Backend Project') {
             steps {
-                sh 'cd speBackend && mvn clean package'
+                sh 'cd speBackend && mvn clean install'
             }
         }
         stage('Build Docker Image') {
