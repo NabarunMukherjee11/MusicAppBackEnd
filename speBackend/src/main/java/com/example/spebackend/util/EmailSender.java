@@ -25,12 +25,12 @@ public class EmailSender {
             mimeMessageHelper.setTo(email);
             mimeMessageHelper.setSubject("LaayaXXX Music OTP:");
 
-            String htmlContent = String.format("""
-                Your One Time Password (OTP) for LaayaXXX account is:
-                %s
-                Regards,
-                Team LaayaXXX Music
-                """, otp);
+            String htmlContent = String.format(
+                "Your One Time Password (OTP) for LaayaXXX account is:" +
+                "%s" +
+                "Regards," +
+                "Team LaayaXXX Music"
+                , otp);
             mimeMessageHelper.setText(htmlContent);
             javaMailSender.send(mimeMailMessage);
         } catch (MessagingException e) {
