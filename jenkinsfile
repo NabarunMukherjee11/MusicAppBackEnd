@@ -13,6 +13,7 @@ pipeline {
             steps {
                 script{
                     sh 'cd speBackend && mvn clean install'
+                }
             }
         }
         stage('Build Docker Image') {
