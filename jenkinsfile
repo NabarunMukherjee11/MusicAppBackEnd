@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                script{
                 git branch: 'main', url: "https://github.com/NabarunMukherjee11/MusicAppBackEnd.git"
+                }
             }
         }
         stage('Build Backend Project') {
