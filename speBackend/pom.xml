@@ -81,7 +81,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.example.SpeBackendApplication</mainClass> <!-- Specify your main class here -->
+                            <mainClass>com.example.spebackend.SpeBackendApplication</mainClass> <!-- Specify your main class here -->
                         </manifest>
                     </archive>
                 </configuration>
