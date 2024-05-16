@@ -1,3 +1,1 @@
-# inventory.ini
-
-localhost  ansible_connection=local ansible_user=nabarun ansible_ssh_pass=90909090
+localhost ansible_connection=local ansible_user=nabarun ansible_ssh_pass=90909090
