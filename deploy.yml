@@ -5,18 +5,7 @@
   vars:
     ansible_become_pass: "789639"
   tasks:
-    - name: Copy Docker Compose file
-      copy:
-        src: docker-compose.yml
-        dest: docker-compose.yml
-      register: copy_result
-
     - name: Start Docker Compose
       command: docker-compose -f docker-compose.yml up -d
       register: compose_result
       ignore_errors: yes
-
-    - name: Print Docker Compose logs
-      command: docker-compose -f docker-compose.yml logs
-      ignore_errors: yes
-
