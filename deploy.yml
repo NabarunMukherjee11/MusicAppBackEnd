@@ -1,0 +1,26 @@
+---
+- name: Deploy Docker Compose file
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Copy Docker Compose file
+      copy:
+        src: docker-compose.yml
+        dest: docker-compose.yml
+      register: copy_result
+
+    - name: Check if file copied successfully
+      fail:
+        msg: "Failed to copy Docker Compose file"
+      when: copy_result.failed
+
+    - name: Start Docker Compose
+      command: docker-compose -f docker-compose.yml up -d
+      register: compose_result
+      ignore_errors: yes
+
+    - name: Print Docker Compose logs
+      command: docker-compose -f docker-compose.yml logs
+      ignore_errors: yes
+

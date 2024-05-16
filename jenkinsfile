@@ -23,11 +23,37 @@ pipeline {
                 }
             }
         }
+	stage('Remove Existing Docker Image') {
+            steps {
+                script {
+                    try {
+                        docker.image('nabaruniiitb/musicappbackend:latest').remove()
+                    } catch (Exception e) {
+                        // Image doesn't exist or couldn't be removed
+                        echo "No existing image found or failed to remove"
+                    }
+                }
+            }
+        }
         stage('Push to Docker Hub') {
             steps {
                 script {
                     docker.withRegistry('', 'DockerHubCred') {
                         docker.image('nabaruniiitb/musicappbackend').push('latest') 
+                    }
+                }
+            }
+        }
+	stage('Deploy with Ansible') {
+            steps {
+                script {
+                    try {
+                        ansiblePlaybook(
+                            playbook: 'deploy.yml',
+                            inventory: 'inventory.ini'
+                        )
+                    } catch (Exception e) {
+                        echo "Failed to deploy with Ansible: ${e}"
                     }
                 }
             }
