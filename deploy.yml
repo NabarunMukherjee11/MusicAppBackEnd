@@ -2,18 +2,14 @@
 - name: Deploy Docker Compose file
   hosts: localhost
   become: yes
-
+  vars:
+    ansible_become_pass: "789639"
   tasks:
     - name: Copy Docker Compose file
       copy:
         src: docker-compose.yml
         dest: docker-compose.yml
       register: copy_result
-
-    - name: Check if file copied successfully
-      fail:
-        msg: "Failed to copy Docker Compose file"
-      when: copy_result.failed
 
     - name: Start Docker Compose
       command: docker-compose -f docker-compose.yml up -d
