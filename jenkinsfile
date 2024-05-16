@@ -47,14 +47,7 @@ pipeline {
 	stage('Deploy with Ansible') {
             steps {
                 script {
-                    try {
-                        ansiblePlaybook(
-                            playbook: 'deploy.yml',
-                            inventory: 'inventory'
-                        )
-                    } catch (Exception e) {
-                        echo "Failed to deploy with Ansible: ${e}"
-                    }
+                    sh 'ansible-playbook -i inventory.ini deploy.yml'
                 }
             }
         }
