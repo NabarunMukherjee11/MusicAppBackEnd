@@ -50,7 +50,7 @@ pipeline {
                     try {
                         ansiblePlaybook(
                             playbook: 'deploy.yml',
-                            inventory: 'inventory.ini'
+                            inventory: 'inventory'
                         )
                     } catch (Exception e) {
                         echo "Failed to deploy with Ansible: ${e}"
