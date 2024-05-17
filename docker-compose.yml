@@ -6,6 +6,8 @@ services:
     ports:
       - "9292:9292"
     restart: always
+    volumes:
+      - /e/songs:/app/songs
     deploy:
       replicas: 1
 
