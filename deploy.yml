@@ -1,11 +1,8 @@
 ---
 - name: Deploy Docker Compose file
   hosts: localhost
-  become: yes
-  vars:
-    ansible_become_pass: "789639"
+  remote_user: nabarun
+  become: false
   tasks:
     - name: Start Docker Compose
-      command: docker-compose -f docker-compose.yml up -d
-      register: compose_result
-      ignore_errors: yes
+      shell: docker-compose up -d
