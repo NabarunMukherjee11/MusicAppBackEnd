@@ -7,7 +7,7 @@ services:
       - "9292:9292"
     restart: always
     volumes:
-      - /e/songs:/app/songs
+      - /mnt/e/songs:/app/songs
     deploy:
       replicas: 1
 
