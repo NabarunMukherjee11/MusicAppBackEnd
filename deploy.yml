@@ -4,5 +4,10 @@
   remote_user: nabarun
   become: false
   tasks:
+    - name: Pull the latest musicappbackend image
+      docker_image:
+        name: nabaruniiitb/musicappbackend
+        tag: latest
+        source: pull
     - name: Start Docker Compose
       shell: docker-compose up -d
