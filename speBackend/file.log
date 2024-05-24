@@ -1,0 +1,39 @@
+2024-05-24 22:00:40 [restartedMain] INFO  c.e.spebackend.SpeBackendApplication - Starting SpeBackendApplication using Java 21.0.1 with PID 21424 (E:\SPEProjectBackend\speBackend\target\classes started by nabar in E:\SPEProjectBackend\speBackend)
+2024-05-24 22:00:40 [restartedMain] INFO  c.e.spebackend.SpeBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-24 22:00:40 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-24 22:00:40 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-24 22:00:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-24 22:00:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2024-05-24 22:00:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9292 (http)
+2024-05-24 22:00:43 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9292"]
+2024-05-24 22:00:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-24 22:00:43 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-05-24 22:00:43 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-24 22:00:43 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2402 ms
+2024-05-24 22:00:43 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-24 22:00:43 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-24 22:00:43 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-24 22:00:44 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-24 22:00:44 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-24 22:00:47 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1218890a
+2024-05-24 22:00:47 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-24 22:00:47 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-24 22:00:49 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-24 22:00:50 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-24 22:00:51 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-24 22:00:52 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-24 22:00:52 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@226135d0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f31b0b0, org.springframework.security.web.context.SecurityContextHolderFilter@62274e1f, org.springframework.security.web.header.HeaderWriterFilter@4e5969dd, org.springframework.web.filter.CorsFilter@3359315a, org.springframework.security.web.authentication.logout.LogoutFilter@2e217d9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77d8b5e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c6d81ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@150c40b8, org.springframework.security.web.access.ExceptionTranslationFilter@3a92401b]
+2024-05-24 22:00:52 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-05-24 22:00:52 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9292"]
+2024-05-24 22:00:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9292 (http) with context path ''
+2024-05-24 22:00:53 [restartedMain] INFO  c.e.spebackend.SpeBackendApplication - Started SpeBackendApplication in 12.643 seconds (process running for 14.375)
+2024-05-24 22:03:06 [http-nio-9292-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-24 22:03:06 [http-nio-9292-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-24 22:03:06 [http-nio-9292-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 113 ms
+2024-05-24 22:03:07 [http-nio-9292-exec-1] INFO  c.e.s.controller.LoginController - Generating OTP for email: nabarunm21@gmail.com
+2024-05-24 22:03:14 [http-nio-9292-exec-1] INFO  c.e.s.controller.LoginController - OTP generated successfully for email: nabarunm21@gmail.com
+2024-05-24 22:03:20 [http-nio-9292-exec-3] INFO  c.e.s.controller.LoginController - Verifying OTP for email: nabarunm21@gmail.com
+2024-05-24 22:03:21 [http-nio-9292-exec-3] WARN  c.e.s.controller.LoginController - Invalid OTP provided for email: nabarunm21@gmail.com
+2024-05-24 22:17:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-24 22:17:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-24 22:17:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
